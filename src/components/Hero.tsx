@@ -5,27 +5,37 @@ import { PRODUCT_INFO } from '../constants';
 const Hero = () => {
   const { heroCopy } = PRODUCT_INFO;
 
- return (
+  return (
     <section className="relative h-screen w-full flex flex-col justify-between overflow-hidden">
+      
+      {/* 1. 배경 이미지 및 어두운 오버레이 */}
       <div className="absolute inset-0 z-0">
         <img
-  src={mainBgImage}
-  alt="MIRI Eyewear — 햇빛 아래의 라이프스타일"
-  className="w-full h-full object-cover brightness-50"
-/>
-<div className="absolute inset-0 z-0">
-  {/* 1. 이미지 자체를 어둡게 누름 (opacity-90 삭제, brightness-50 추가) */}
-  <img
-    src={mainBgImage}
-    alt="MIRI Eyewear"
-    className="w-full h-full object-cover brightness-50"
-  />
-  {/* 2. 밝은 아이보리색 필터를 어두운 검은색(black) 필터로 교체하여 흰 글씨 가독성 극대화 */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
-</div>
-      <div className="relative z-10 pb-12 w-full flex justify-center fade-in-up delay-500">
-        <ArrowDown className="text-brown-800 animate-bounce w-6 h-6" strokeWidth={1} />
+          src={mainBgImage}
+          alt="MIRI Eyewear"
+          className="w-full h-full object-cover brightness-50"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
       </div>
+
+      {/* 2. 메인 텍스트 영역 (소실된 코드 복구 및 text-white 적용) */}
+      <div className="relative z-10 container mx-auto px-6 pt-32 h-full flex flex-col justify-center items-center text-center">
+        <p className="text-xl font-bold text-white mb-4 tracking-wider">
+          {heroCopy.title}
+        </p>
+        <h1 className="text-5xl md:text-6xl font-bold leading-snug text-white">
+          {heroCopy.subtitle}
+        </h1>
+        <p className="mt-6 text-xl text-white/90 whitespace-pre-line leading-relaxed">
+          {heroCopy.desc}
+        </p>
+      </div>
+
+      {/* 3. 하단 화살표 (배경 대비를 위해 흰색으로 변경) */}
+      <div className="relative z-10 pb-12 w-full flex justify-center fade-in-up delay-500">
+        <ArrowDown className="text-white animate-bounce w-6 h-6" strokeWidth={1} />
+      </div>
+
     </section>
   );
 };
