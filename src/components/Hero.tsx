@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="relative h-screen w-full flex flex-col justify-between overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://picsum.photos/1920/1080?grayscale"
+          src="src/assets/main-visual-new.png"
           alt="MIRI Eyewear — 햇빛 아래의 라이프스타일"
           className="w-full h-full object-cover opacity-90"
         />
