@@ -28,7 +28,7 @@ jobs:
         cache: npm
       
       - run: npm ci
-      # --base 설정을 실제 레포지토리 이름인 /eyewear/로 정확히 수정했습니다.
+      
       - run: npm run build -- --base=/eyewear/
       
       - uses: actions/upload-pages-artifact@v3
