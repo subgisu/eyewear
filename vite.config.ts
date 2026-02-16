@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/eyewear/', // 이 부분이 추가되었습니다.
+  base: '/eyewear/',
   server: {
     port: 3000,
     host: '0.0.0.0',
